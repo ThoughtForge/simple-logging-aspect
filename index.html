@@ -41,11 +41,39 @@ representation as returned by invoking toString.</p>
 
 <p>Below is an example of annotating a method to be logged:</p>
 
-<p><a href="https://github.com/Log" class="user-mention">@Log</a>(logLevel=LogLevel.INFO, logParameters=true)</p>
+<p>@Log(logLevel=LogLevel.INFO, logParameters=true)</p>
 
 <h2>Using with AspectJ Compile Time Weaving</h2>
 
-<p>TODO</p>
+<p>AspectJ compile time weaving weaves the logging aspect into your code at
+compile time.  As a result, there are no directives or agents required at
+runtime.
+
+Assuming you are using Maven, in order to enable AspectJ weaving process you
+need to use the aspectj-maven-plugin plugin and configure it appropriately in
+the pom.xml. Below is an example of the aspectj-maven-plugin configuration:</p>
+
+<pre>
+&lt;plugin&gt;
+	&lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+	&lt;artifactId&gt;aspectj-maven-plugin&lt;/artifactId&gt;
+	&lt;version&gt;1.4&lt;/version&gt;
+	&lt;executions&gt;
+		&lt;execution&gt;
+			&lt;configuration&gt;
+				&lt;source&gt;${project.build.source}&lt;/source&gt;
+				&lt;target&gt;${project.build.target}&lt;/target&gt;
+
+				&lt;outxml&gt;true&lt;/outxml&gt;
+			&lt;/configuration&gt;
+			&lt;goals&gt;
+				&lt;goal&gt;compile&lt;/goal&gt;
+				&lt;goal&gt;test-compile&lt;/goal&gt;
+			&lt;/goals&gt;
+		&lt;/execution&gt;
+	&lt;/executions&gt;
+&lt;/plugin&gt;
+</pre>
 
 <h2>Using with AspectJ Load Time Weaving</h2>
 
