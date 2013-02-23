@@ -108,7 +108,7 @@
     </properties>
     
     <scm>
-    	<connection>https://svn-thoughtforge.forge.cloudbees.com/commons/</connection>
-    	<developerConnection>https://svn-thoughtforge.forge.cloudbees.com/commons/</developerConnection>
+    	<connection>https://github.com/ThoughtForge/simple-logging-aspect.git</connection>
+    	<developerConnection>https://github.com/ThoughtForge/simple-logging-aspect.git</developerConnection>
     </scm>
 </project>
