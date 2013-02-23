@@ -1,0 +1,114 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>net.thoughtforge.aspectj</groupId>
+	<artifactId>simple-logging-aspect</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+    <name>Simple Logging Aspect</name>
+    
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${project.build.source}</source>
+					<target>${project.build.target}</target>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>aspectj-maven-plugin</artifactId>
+				<version>1.4</version>
+				<executions>
+					<execution>
+						<configuration>
+							<source>${project.build.source}</source>
+							<target>${project.build.target}</target>
+							
+							<outxml>true</outxml>
+						</configuration>
+						<goals>
+							<goal>compile</goal>
+							<goal>test-compile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+    <dependencies>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${org.apache.commons.commons-lang3_version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>${org.aspectj_version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${org.aspectj_version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+  		<dependency>
+  			<groupId>org.hamcrest</groupId>
+  			<artifactId>hamcrest-all</artifactId>
+  			<version>1.3</version>
+  			<scope>test</scope>
+  		</dependency>
+  		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j_verison}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${org.testng_version}</version>
+			<scope>test</scope>
+		</dependency>
+    </dependencies>
+    
+    <distributionManagement>
+    	<repository>
+    		<id>release</id>
+    		<url>https://repository-thoughtforge.forge.cloudbees.com/release/</url>
+    	</repository>
+    	<snapshotRepository>
+    		<id>snapshot</id>
+    		<url>https://repository-thoughtforge.forge.cloudbees.com/snapshot/</url>
+    	</snapshotRepository>
+    </distributionManagement>
+    
+    <properties>
+    	<project.build.source>1.6</project.build.source>
+    	<project.build.target>1.6</project.build.target>
+    	
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	
+    	<org.apache.commons.commons-lang3_version>3.1</org.apache.commons.commons-lang3_version>
+    	<org.aspectj_version>1.6.11</org.aspectj_version>
+    	<org.slf4j_verison>1.7.2</org.slf4j_verison>
+    	<org.testng_version>6.8</org.testng_version>
+    </properties>
+    
+    <scm>
+    	<connection>https://svn-thoughtforge.forge.cloudbees.com/commons/</connection>
+    	<developerConnection>https://svn-thoughtforge.forge.cloudbees.com/commons/</developerConnection>
+    </scm>
+</project>
