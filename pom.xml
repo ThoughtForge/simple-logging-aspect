@@ -142,6 +142,6 @@
     <scm>
     	<connection>scm:git:git@github.com:ThoughtForge/simple-logging-aspect.git</connection>
     	<developerConnection>scm:git:git@github.com:ThoughtForge/simple-logging-aspect.git</developerConnection>
-		<url>scm:git:git@github.com:ThoughtForge/simple-logging-aspect.git</url>
+		<url>https://github.com/ThoughtForge/simple-logging-aspect</url>
     </scm>
 </project>
