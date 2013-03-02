@@ -30,7 +30,6 @@ Assuming you are using Maven, in order to enable AspectJ weaving process you
 need to use the aspectj-maven-plugin plugin and configure it appropriately in
 the pom.xml. Below is an example of the aspectj-maven-plugin configuration:
 
-<pre>
 	<plugin>
 		<groupId>org.codehaus.mojo</groupId>
 		<artifactId>aspectj-maven-plugin</artifactId>
@@ -50,7 +49,6 @@ the pom.xml. Below is an example of the aspectj-maven-plugin configuration:
 			</execution>
 		</executions>
 	</plugin>
-</pre>
 
 Using with AspectJ Load Time Weaving
 ------------------------------------
