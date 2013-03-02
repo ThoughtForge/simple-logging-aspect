@@ -5,10 +5,12 @@
 
 	<groupId>net.thoughtforge.aspectj</groupId>
 	<artifactId>simple-logging-aspect</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 
     <name>Simple Logging Aspect</name>
     
+	<url>http://thoughtforge.github.com/simple-logging-aspect/</url>
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -19,6 +21,18 @@
 					<source>${project.build.source}</source>
 					<target>${project.build.target}</target>
 				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			
 			<plugin>
@@ -86,15 +100,28 @@
     
     <distributionManagement>
     	<repository>
-    		<id>release</id>
+    		<id>cloudbees</id>
     		<url>https://repository-thoughtforge.forge.cloudbees.com/release/</url>
     	</repository>
     	<snapshotRepository>
-    		<id>snapshot</id>
+    		<id>cloudbees</id>
     		<url>https://repository-thoughtforge.forge.cloudbees.com/snapshot/</url>
     	</snapshotRepository>
     </distributionManagement>
     
+	<issueManagement>
+		<url>https://github.com/ThoughtForge/simple-logging-aspect/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+	
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+  
     <properties>
     	<project.build.source>1.6</project.build.source>
     	<project.build.target>1.6</project.build.target>
@@ -108,7 +135,8 @@
     </properties>
     
     <scm>
-    	<connection>https://github.com/ThoughtForge/simple-logging-aspect.git</connection>
-    	<developerConnection>https://github.com/ThoughtForge/simple-logging-aspect.git</developerConnection>
+    	<connection>scm:git:git://github.com/ThoughtForge/simple-logging-aspect.git</connection>
+    	<developerConnection>scm:git:git@github.com:ThoughtForge/simple-logging-aspect.git</developerConnection>
+		<url>https://github.com/ThoughtForge/simple-logging-aspect</url>
     </scm>
 </project>
