@@ -1,7 +1,8 @@
 package net.thoughtforge.commons.logging.aspect;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -11,12 +12,12 @@ import net.thoughtforge.commons.logging.SimpleBean;
 import net.thoughtforge.commons.logging.SimpleBeanSubclass;
 
 import org.apache.commons.lang3.time.DateUtils;
+import org.junit.Before;
+import org.junit.Test;
 import org.slf4j.impl.LogMessage;
 import org.slf4j.impl.MockLogger;
 import org.slf4j.impl.MockLoggerFactory;
 import org.slf4j.impl.StaticLoggerBinder;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
 public class LoggingAspectTest {
 
@@ -28,7 +29,7 @@ public class LoggingAspectTest {
 
     private Date datePropertyValue;
 
-    @BeforeMethod
+    @Before
     public void before() throws Exception {
         datePropertyValue = DateUtils.parseDate("01/01/2010", new String[] {"dd/MM/yyyy"});
         
