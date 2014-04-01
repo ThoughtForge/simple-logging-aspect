@@ -1,4 +1,4 @@
-package net.thoughtforge.commons.logging.aspect;
+package net.thoughtforge.aspects.logging;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -7,9 +7,9 @@ import static org.hamcrest.Matchers.is;
 import java.math.BigDecimal;
 import java.util.Date;
 
-import net.thoughtforge.commons.logging.MethodLogger;
-import net.thoughtforge.commons.logging.SimpleBean;
-import net.thoughtforge.commons.logging.SimpleBeanSubclass;
+import net.thoughtforge.aspects.logging.MethodLogger;
+import net.thoughtforge.aspects.logging.SimpleBean;
+import net.thoughtforge.aspects.logging.SimpleBeanSubclass;
 
 import org.apache.commons.lang3.time.DateUtils;
 import org.junit.Before;

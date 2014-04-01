@@ -1,4 +1,4 @@
-package net.thoughtforge.commons.logging;
+package net.thoughtforge.aspects.logging;
 
 import org.apache.commons.lang3.ArrayUtils;
 

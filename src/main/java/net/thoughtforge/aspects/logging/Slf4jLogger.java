@@ -1,4 +1,4 @@
-package net.thoughtforge.commons.logging;
+package net.thoughtforge.aspects.logging;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

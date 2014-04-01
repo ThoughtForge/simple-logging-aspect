@@ -1,4 +1,4 @@
-package net.thoughtforge.commons.logging;
+package net.thoughtforge.aspects.logging;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;

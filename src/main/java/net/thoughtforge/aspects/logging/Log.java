@@ -1,4 +1,4 @@
-package net.thoughtforge.commons.logging;
+package net.thoughtforge.aspects.logging;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
