@@ -22,7 +22,7 @@ Below is an example of annotating a method to be logged:
 Using with AspectJ Compile Time Weaving
 ---------------------------------------
 
-AspectJ compile time weaving weaves the logging aspect into your code at
+AspectJ compile-time weaving weaves the logging aspect into your code at
 compile time.  As a result, there are no directives or agents required at
 runtime.
 
@@ -53,8 +53,14 @@ the pom.xml. Below is an example of the aspectj-maven-plugin configuration:
 Using with AspectJ Load Time Weaving
 ------------------------------------
 
-TODO
+AspectJ load-time weaving weaves the logging aspect into your code at class
+load time.  To enable load-time you must specify the AspectJ java agent option
+to the JVM.
 
+	-javaagent:pathto/aspectjweaver.jar
+
+The load-time weaver will automatically load the META-INF/aop.xml file located
+in the simple-logging-aspect.jar which must be on the classpath.
 
 Using with Spring AOP Proxy Based Weaving
 -----------------------------------------
