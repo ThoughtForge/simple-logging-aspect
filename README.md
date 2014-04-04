@@ -57,7 +57,7 @@ AspectJ load-time weaving weaves the logging aspect into your code at class
 load time.  To enable load-time you must specify the AspectJ java agent option
 to the JVM.
 
-	-javaagent:pathto/aspectjweaver.jar
+	java -javaagent:pathto/aspectjweaver.jar -jar application.jar
 
 The load-time weaver will automatically load the META-INF/aop.xml file located
 in the simple-logging-aspect.jar which must be on the classpath.
