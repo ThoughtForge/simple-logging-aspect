@@ -59,6 +59,7 @@ to the JVM.
 
 	java -javaagent:pathto/aspectjweaver.jar -jar application.jar
 
+To configure load-time weaving
 The load-time weaver will automatically load the META-INF/aop.xml file located
 in the simple-logging-aspect.jar which must be on the classpath.
 
